@@ -6,58 +6,148 @@
   <title>Home | UFC Fan Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #0d0d0d; color: #fff; scroll-behavior: smooth; }
-    .navbar, footer { background-color: #111; }
-    .card { background-color: #1a1a1a; color: #fff; border: 1px solid #444; }
-    .btn-ufc { background-color: #e10600; color: white; }
-    .btn-ufc:hover { background-color: #c00000; }
-    section { padding-top: 3rem; padding-bottom: 3rem; }
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    .navbar, footer {
+      background-color: #111;
+    }
+    .card, .flip-card {
+      background-color: #1a1a1a;
+      color: #fff;
+      border: none;
+    }
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .flip-card-back {
+      background-color: #222;
+      color: white;
+      transform: rotateY(180deg);
+      padding: 1em;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e10600;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">UFC</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
-        <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
-        <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">UFC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
+          <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
 
-<section>
-  <h2>Welcome to UFC Fan Site</h2>
-  <div class="card mb-4">
-    <img src="https://via.placeholder.com/800x300?text=UFC+Banner" class="card-img-top" alt="UFC Banner">
-    <div class="card-body text-center">
-      <button class="btn btn-ufc">Join the Fight Club</button>
+    <!-- UFC Banner -->
+    <div class="card mb-4">
+      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_3000/s3/2024-12/122924-UFC-3000-Web-Announcement-MainGraphic-1920x1080.jpg" class="card-img-top" alt="UFC Banner">
     </div>
-  </div>
-  <div class="row g-4">
-    <div class="col-md-4"><div class="card p-3">Latest UFC News</div></div>
-    <div class="col-md-4"><div class="card p-3">Upcoming Fight Highlight</div></div>
-    <div class="col-md-4"><div class="card p-3">Fan Favorite Moments</div></div>
-  </div>
-</section>
 
-</main>
+    <!-- Latest UFC News -->
+    <section>
+      <h2 class="section-title">Latest Fight Drama</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://cdn.vox-cdn.com/thumbor/Y3VW2M49nTEAxKDKP_aLQBeMdSw=/0x0:2040x1360/1920x1080/filters:focal(1013x247:1329x563):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/72698097/1629341592.0.jpg" alt="Drama" />
+              </div>
+              <div class="flip-card-back">
+                <h5>Strickland Calls Out Du Plessis</h5>
+                <p>Sean Strickland fires back after UFC 314 loss. Accuses Du Plessis of ducking a rematch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<footer class="text-center text-white py-3">
-  <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
-</footer>
+        <!-- Upcoming Fight Highlight -->
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://media.ufc.com/2025-ufc315-belal-vs-jdm.jpg" alt="Upcoming Fight" />
+              </div>
+              <div class="flip-card-back">
+                <h5>Upcoming Fight</h5>
+                <p>UFC 315: Belal Muhammad defends the title against Jack Della Maddalena – May 10, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Fan Favorite Moments -->
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.mmaweekly.com/wp-content/uploads/2024/03/Sandhagen-KO.jpg" alt="Knockout" />
+              </div>
+              <div class="flip-card-back">
+                <h5>Fan Favorite Moment</h5>
+                <p>Cory Sandhagen’s spinning elbow KO still stuns fans across the globe!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-3">
+    <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
