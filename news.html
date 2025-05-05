@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,52 +7,99 @@
   <title>Fight News | UFC Fan Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #0d0d0d; color: #fff; scroll-behavior: smooth; }
-    .navbar, footer { background-color: #111; }
-    .card { background-color: #1a1a1a; color: #fff; border: 1px solid #444; }
-    .btn-ufc { background-color: #e10600; color: white; }
-    .btn-ufc:hover { background-color: #c00000; }
-    section { padding-top: 3rem; padding-bottom: 3rem; }
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    .navbar, footer {
+      background-color: #111;
+    }
+    .card {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid #444;
+    }
+    .card img {
+      object-fit: cover;
+      height: 200px;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e10600;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">UFC</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
-        <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
-        <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">UFC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
+          <li class="nav-item"><a class="nav-link active" href="news.html">Fight News</a></li>
+          <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
+    <h2 class="section-title">Recent UFC News</h2>
+    <div class="row g-4">
+      <!-- News Article 1 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/news/AprilRecap.jpg" class="card-img-top" alt="April Recap">
+          <div class="card-body">
+            <h5 class="card-title">Monthly Report | April 2025</h5>
+            <p class="card-text">A recap of April’s top fights: Dvalishvili’s title defense, Sandhagen’s KO, and Volkanovski's return to champion form.</p>
+            <a href="https://www.ufc.com/news/monthly-report-april-2025" class="btn btn-danger btn-sm" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- News Article 2 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/news/MayFights.jpg" class="card-img-top" alt="May Fights Preview">
+          <div class="card-body">
+            <h5 class="card-title">10 Massive Fights Coming in May</h5>
+            <p class="card-text">Top matchups in May include Belal vs. JDM, Shevchenko vs. Fiorot, and the return of Sean O’Malley vs. Merab.</p>
+            <a href="https://www.ufc.com/news/the-10-massive-fights-on-the-schedule-in-may-2025" class="btn btn-danger btn-sm" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- News Article 3 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/news/FeatherweightUpdate.jpg" class="card-img-top" alt="Featherweight Update">
+          <div class="card-body">
+            <h5 class="card-title">Where We Stand: Featherweights</h5>
+            <p class="card-text">Volkanovski is back on top. What’s next for Topuria, Holloway, and Lopes after UFC 314’s shake-up?</p>
+            <a href="https://www.ufc.com/news/where-we-stand-featherweight-april-2025" class="btn btn-danger btn-sm" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<section>
-  <h2>Fight News</h2>
-  <div class="row g-4">
-    <div class="col-md-4"><div class="card p-3">Featured Article</div></div>
-    <div class="col-md-4"><div class="card p-3">Article 1</div></div>
-    <div class="col-md-4"><div class="card p-3">Article 2</div></div>
-  </div>
-</section>
+  <!-- Footer -->
+  <footer class="text-center text-white py-3">
+    <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
+  </footer>
 
-</main>
-
-<footer class="text-center text-white py-3">
-  <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
