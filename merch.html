@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,52 +7,128 @@
   <title>Merchandise | UFC Fan Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #0d0d0d; color: #fff; scroll-behavior: smooth; }
-    .navbar, footer { background-color: #111; }
-    .card { background-color: #1a1a1a; color: #fff; border: 1px solid #444; }
-    .btn-ufc { background-color: #e10600; color: white; }
-    .btn-ufc:hover { background-color: #c00000; }
-    section { padding-top: 3rem; padding-bottom: 3rem; }
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    .navbar, footer {
+      background-color: #111;
+    }
+    .card {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid #444;
+    }
+    .card img {
+      object-fit: cover;
+      height: 200px;
+    }
+    .btn-ufc {
+      background-color: #e10600;
+      border: none;
+    }
+    .btn-ufc:hover {
+      background-color: #c00000;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e10600;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">UFC</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
-        <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
-        <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">UFC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
+          <li class="nav-item"><a class="nav-link active" href="merch.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
+    <h2 class="section-title">Shop Official UFC Gear</h2>
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://fanatics.frgimages.com/ufc/ufc-legacy-championship-replica-belt_ss5_p-200571521+u-1p5ot9s57q3erfhevxqb+v-d2b7a9b3473d49fdb2e7f07e5b85b1e8.jpg" class="card-img-top" alt="UFC Belt">
+          <div class="card-body">
+            <h5 class="card-title">Legacy Championship Replica Belt</h5>
+            <p class="card-text">$849.99</p>
+            <a href="https://www.ufcstore.com/en/ufc-legacy-championship-replica-belt/p-241155983909065840+z-97-1707340532" class="btn btn-ufc" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://fanatics.frgimages.com/ufc/mens-maroon-ufc-315-location-t-shirt_ss5_p-200928929+u-1sg5g2mspxmd9yg5fbvp+v-729c512f98ab464bbfc9dc9eb3fc73c6.jpg" class="card-img-top" alt="UFC 315 Shirt">
+          <div class="card-body">
+            <h5 class="card-title">UFC 315 Location T-Shirt</h5>
+            <p class="card-text">$39.99</p>
+            <a href="https://www.ufcstore.com/en/mens-maroon-ufc-315-location-t-shirt/p-" class="btn btn-ufc" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://fanatics.frgimages.com/ufc/mens-under-armour-black-ufc-project-rock-bsr-5-training-shoes_ss5_p-200921843+u-1rm1d4zt0azhdac6pjzh+v-47bc7f38237b47d3a455eefc64ed33fd.jpg" class="card-img-top" alt="Project Rock Shoes">
+          <div class="card-body">
+            <h5 class="card-title">Project Rock UFC BSR 5 Shoes</h5>
+            <p class="card-text">$99.99</p>
+            <a href="https://www.ufcstore.com/en/mens-under-armour-black-ufc-project-rock-bsr-5-training-shoes/p-" class="btn btn-ufc" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://fanatics.frgimages.com/ufc/mens-ufc-fusion-by-venum-black/gold-fight-night-personalized-champion-walkout-jersey_ss5_p-200928937+u-vp5o7txyq90bj9s95zvh+v-fd05bc107e5c4e689fdbdd21b39f276e.jpg" class="card-img-top" alt="Champion Jersey">
+          <div class="card-body">
+            <h5 class="card-title">Champion Walkout Jersey (Black/Gold)</h5>
+            <p class="card-text">$124.99</p>
+            <a href="https://www.ufcstore.com/en/mens-ufc-fusion-by-venum-black/gold-fight-night-personalized-champion-walkout-jersey/p-" class="btn btn-ufc" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://fanatics.frgimages.com/ufc/mens-ufc-fusion-by-venum-black-personalized-authentic-fight-night-ufc-universal-full-zip-walkout-hoodie_ss5_p-200928934+u-3d3b6pvoksvsqzd5jw6g+v-f6a9ec585f8a4fc28cfdd45dc6537ae3.jpg" class="card-img-top" alt="Walkout Hoodie">
+          <div class="card-body">
+            <h5 class="card-title">UFC Full-Zip Walkout Hoodie</h5>
+            <p class="card-text">$189.99</p>
+            <a href="https://www.ufcstore.com/en/mens-ufc-fusion-by-venum-black-personalized-authentic-fight-night-ufc-universal-full-zip-walkout-hoodie/p-" class="btn btn-ufc" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<section>
-  <h2>Merchandise</h2>
-  <div class="row g-4">
-    <div class="col-md-4"><div class="card p-3">Product Item</div></div>
-    <div class="col-md-4"><div class="card p-3">Product Item</div></div>
-    <div class="col-md-4"><div class="card p-3">Product Item</div></div>
-  </div>
-</section>
+  <!-- Footer -->
+  <footer class="text-center text-white py-3">
+    <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
+  </footer>
 
-</main>
-
-<footer class="text-center text-white py-3">
-  <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
