@@ -6,51 +6,170 @@
   <title>Fight Schedule | UFC Fan Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #0d0d0d; color: #fff; scroll-behavior: smooth; }
-    .navbar, footer { background-color: #111; }
-    .card { background-color: #1a1a1a; color: #fff; border: 1px solid #444; }
-    .btn-ufc { background-color: #e10600; color: white; }
-    .btn-ufc:hover { background-color: #c00000; }
-    section { padding-top: 3rem; padding-bottom: 3rem; }
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    .navbar, footer {
+      background-color: #111;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: none;
+    }
+    .list-group-item {
+      background-color: #1a1a1a;
+      color: #fff;
+      border-bottom: 1px solid #444;
+    }
+    .scroll-box {
+      max-height: 450px;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+    .event-img {
+      width: 90px;
+      height: auto;
+      object-fit: cover;
+      margin-right: 1rem;
+      border-radius: 6px;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e10600;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">UFC</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="schedule.html">Fight Schedule</a></li>
-        <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
-        <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">UFC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="schedule.html">Fight Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="fighters.html">Fighter Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Fight News</a></li>
+          <li class="nav-item"><a class="nav-link" href="merch.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
+    <section>
+      <h2 class="section-title">Upcoming UFC Events</h2>
+      <div class="card scroll-box">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-05-10-UFC315.jpg" class="event-img" alt="UFC 315">
+            <div>
+              <strong>UFC 315: Muhammad vs. Della Maddalena</strong><br>
+              May 10, 2025 – Montreal<br>
+              Main: Belal Muhammad vs. Jack Della Maddalena
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-05-17-BurnsMorales.jpg" class="event-img" alt="Burns Morales">
+            <div>
+              <strong>Fight Night: Burns vs. Morales</strong><br>
+              May 17, 2025 – Las Vegas<br>
+              Main: Gilbert Burns vs. Michael Morales
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-05-31-BlanchfieldBarber.jpg" class="event-img" alt="Blanchfield Barber">
+            <div>
+              <strong>UFC on ESPN: Blanchfield vs. Barber</strong><br>
+              May 31, 2025 – Las Vegas<br>
+              Main: Erin Blanchfield vs. Maycee Barber
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-06-07-UFC316.jpg" class="event-img" alt="UFC 316">
+            <div>
+              <strong>UFC 316: Dvalishvili vs. O'Malley 2</strong><br>
+              June 7, 2025 – Newark, NJ<br>
+              Main: Merab Dvalishvili vs. Sean O’Malley
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-06-14-UsmanBuckley.jpg" class="event-img" alt="Usman Buckley">
+            <div>
+              <strong>UFC on ESPN: Usman vs. Buckley</strong><br>
+              June 14, 2025 – Atlanta, GA<br>
+              Main: Kamaru Usman vs. Joaquin Buckley
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-<section>
-  <h2>Fight Schedule</h2>
-  <div class="row g-4">
-    <div class="col-md-6"><div class="card p-3">Upcoming Events List</div></div>
-    <div class="col-md-6"><div class="card p-3">Past Fight Archive</div></div>
-  </div>
-</section>
+    <section class="mt-5">
+      <h2 class="section-title">Past UFC Events</h2>
+      <div class="card scroll-box">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-05-03-SandhagenFigueiredo.jpg" class="event-img" alt="Sandhagen Figueiredo">
+            <div>
+              <strong>UFC on ESPN: Sandhagen vs. Figueiredo</strong><br>
+              May 3, 2025 – Des Moines<br>
+              Result: Sandhagen wins via decision
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-04-26-GarryPrates.jpg" class="event-img" alt="Garry Prates">
+            <div>
+              <strong>UFC on ESPN: Garry vs. Prates</strong><br>
+              April 26, 2025 – Kansas City<br>
+              Result: Garry wins, FOTN: Brown vs. Dalby
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-04-12-UFC314.jpg" class="event-img" alt="UFC 314">
+            <div>
+              <strong>UFC 314: Volkanovski vs. Lopes</strong><br>
+              April 12, 2025 – Miami<br>
+              Result: Volkanovski wins; Pimblett wins co-main
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-04-05-EmmettMurphy.jpg" class="event-img" alt="Emmett Murphy">
+            <div>
+              <strong>UFC on ESPN: Emmett vs. Murphy</strong><br>
+              April 5, 2025 – Las Vegas<br>
+              Result: Murphy wins decision
+            </div>
+          </li>
+          <li class="list-group-item d-flex">
+            <img src="https://dmxg5wxfqgb4u.cloudfront.net/2025-03-29-MorenoErceg.jpg" class="event-img" alt="Moreno Erceg">
+            <div>
+              <strong>UFC on ESPN: Moreno vs. Erceg</strong><br>
+              March 29, 2025 – Mexico City<br>
+              Result: Moreno wins; Torres vs. Cháirez earns bonus
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-</main>
+  <!-- Footer -->
+  <footer class="text-center text-white py-3">
+    <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
+  </footer>
 
-<footer class="text-center text-white py-3">
-  <p>&copy; 2025 UFC Fan Site. All rights reserved.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
