@@ -1,62 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | UFC Fan Site</title>
+  <title>UFC Fan Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #0d0d0d;
       color: #fff;
-      scroll-behavior: smooth;
     }
     .navbar, footer {
       background-color: #111;
     }
-    .card, .flip-card {
-      background-color: #1a1a1a;
+    .hero {
+      background-image: url('https://tse1.mm.bing.net/th/id/OIP.3O_of0wo4SxkxrHhj4A6ewHaEK?pid=Api'); /* updated banner image */
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
       color: #fff;
-      border: none;
-    }
-    .flip-card {
-      perspective: 1000px;
-    }
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .flip-card-front img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .flip-card-back {
-      background-color: #222;
-      color: white;
-      transform: rotateY(180deg);
-      padding: 1em;
+      text-shadow: 2px 2px 4px #000;
     }
     .section-title {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
       border-bottom: 2px solid #e10600;
       display: inline-block;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: none;
+    }
+    .card img {
+      height: 250px;
+      object-fit: cover;
+    }
+    .btn-ufc {
+      background-color: #e10600;
+      border: none;
+      color: white;
+    }
+    .btn-ufc:hover {
+      background-color: #c00000;
     }
   </style>
 </head>
@@ -82,65 +75,62 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container py-5">
-
-    <!-- UFC Banner -->
-    <div class="card mb-4">
-      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_3000/s3/2024-12/122924-UFC-3000-Web-Announcement-MainGraphic-1920x1080.jpg" class="card-img-top" alt="UFC Banner">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to the UFC Fan Site</h1>
+      <p class="lead">Your ultimate source for UFC news, fighters, and events.</p>
+      <a href="schedule.html" class="btn btn-ufc mt-3">View Upcoming Fights</a>
     </div>
+  </section>
 
-    <!-- Latest UFC News -->
-    <section>
-      <h2 class="section-title">Latest Fight Drama</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://cdn.vox-cdn.com/thumbor/Y3VW2M49nTEAxKDKP_aLQBeMdSw=/0x0:2040x1360/1920x1080/filters:focal(1013x247:1329x563):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/72698097/1629341592.0.jpg" alt="Drama" />
-              </div>
-              <div class="flip-card-back">
-                <h5>Strickland Calls Out Du Plessis</h5>
-                <p>Sean Strickland fires back after UFC 314 loss. Accuses Du Plessis of ducking a rematch.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Upcoming Fight Highlight -->
-        <div class="col-md-4">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://media.ufc.com/2025-ufc315-belal-vs-jdm.jpg" alt="Upcoming Fight" />
-              </div>
-              <div class="flip-card-back">
-                <h5>Upcoming Fight</h5>
-                <p>UFC 315: Belal Muhammad defends the title against Jack Della Maddalena – May 10, 2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fan Favorite Moments -->
-        <div class="col-md-4">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://www.mmaweekly.com/wp-content/uploads/2024/03/Sandhagen-KO.jpg" alt="Knockout" />
-              </div>
-              <div class="flip-card-back">
-                <h5>Fan Favorite Moment</h5>
-                <p>Cory Sandhagen’s spinning elbow KO still stuns fans across the globe!</p>
-              </div>
-            </div>
+  <!-- Featured Fighters -->
+  <section class="container py-5">
+    <h2 class="section-title">Featured Fighters</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.ufc.com/sites/default/files/styles/portrait_medium/public/2023-09/zhang-weili-ufc-295.jpg" class="card-img-top" alt="Zhang Weili">
+          <div class="card-body">
+            <h5 class="card-title">Zhang Weili</h5>
+            <p class="card-text">Strawweight Champion known for her striking prowess.</p>
+            <a href="fighters.html" class="btn btn-ufc">View Profile</a>
           </div>
         </div>
       </div>
-    </section>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.ufc.com/sites/default/files/styles/portrait_medium/public/2023-09/merab-dvalishvili-ufc-295.jpg" class="card-img-top" alt="Merab Dvalishvili">
+          <div class="card-body">
+            <h5 class="card-title">Merab Dvalishvili</h5>
+            <p class="card-text">Bantamweight contender with relentless pressure.</p>
+            <a href="fighters.html" class="btn btn-ufc">View Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.ufc.com/sites/default/files/styles/portrait_medium/public/2023-09/valentina-shevchenko-ufc-295.jpg" class="card-img-top" alt="Valentina Shevchenko">
+          <div class="card-body">
+            <h5 class="card-title">Valentina Shevchenko</h5>
+            <p class="card-text">Flyweight legend with a versatile skill set.</p>
+            <a href="fighters.html" class="btn btn-ufc">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <!-- Latest Fight News -->
+  <section class="container py-5">
+    <h2 class="section-title">Latest Fight Drama</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p><strong>UFC 315:</strong> Belal Muhammad is set to defend his welterweight title against Jack Della Maddalena on May 10, 2025, in Montreal. Della Maddalena steps in as a replacement for the injured Shavkat Rakhmonov, bringing an impressive undefeated streak since 2016 with seven consecutive UFC wins.</p>
+        <p><strong>Fight Cancellation:</strong> The highly anticipated bout between Benoit Saint-Denis and Joel Alvarez has been canceled due to Alvarez suffering a hand injury. Potential replacements are being considered to keep Saint-Denis on the card.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="text-center text-white py-3">
